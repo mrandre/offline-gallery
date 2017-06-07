@@ -1,0 +1,195 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import 'colors.scss';
+
+body {
+  background-color: #444;
+
+  a, a:visited {
+    color: $CONTRAST_COLOR;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  h1, h3, p, li {
+    color: #eee;
+  }
+}
+
+.photos-show {
+  h1 {
+    text-shadow: 0 0 10px #222;
+  }
+
+  p {
+    text-indent: 0;
+    margin: 10px 0;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: $CONTRAST_COLOR;
+  }
+
+  img {
+    display: block;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.photo-form {
+  label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  input[type=text],
+  textarea {
+    background-color: #333;
+    border: 1px solid #777;
+    color: #eee;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 50%;
+  }
+
+  input[type=button],
+  input[type=submit] {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #111;
+    border: 1px solid #777;
+    color: #eee;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.gallery-page {
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .nav {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .right-side a {
+      background: $CONTRAST_COLOR;
+      color: #222;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    padding: 20px 10px;
+  }
+
+  .gallery {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .big-cta {
+      position: absolute;
+      top: 30%;
+      width: 50%;
+      left: 50%;
+      margin-left: -25%;
+      text-align: center;
+      background-color: #333;
+      border-radius: 5px;
+      border: 1px solid #777;
+      font-size: 20px;
+      padding: 30px 0;
+    }
+
+    .gallery-item {
+      flex: 1 0;
+      padding-left: 0;
+      margin: 10px;
+      list-style: none;
+
+      a {
+        display: block;
+
+        img {
+          display: block;
+          box-shadow: 0 0 30px transparent;
+          transition: box-shadow 0.3s;
+          &:hover {
+            box-shadow: 0 0 30px #222;
+          }
+          &:active {
+            box-shadow: 0 0 30px $CONTRAST_COLOR;
+          }
+        }
+      }
+
+      img {
+        display: block;
+      }
+
+      /* Undo some existing styles */
+      a:hover {
+        text-decoration: none;
+        background-color: transparent;
+      }
+
+      &.add-button {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        justify-content: left;
+
+        h3 {
+          text-align: center;
+          border: 3px solid #777;
+          border-radius: 5px;
+          padding: 20px;
+          margin: 0;
+          width: 250px;
+          cursor: pointer;
+
+          &:hover {
+            background: $CONTRAST_COLOR;
+            border: 3px solid $CONTRAST_COLOR;
+            color: #444;
+          }
+
+          
+        }
+      }
+    }
+  }
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  color: #eee;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,27 @@
+<div class="gallery-page">
+  <header>
+    <div class="nav">
+      <h1>Photos</h1>
+    </div>
+  </header>
+ 
+  <div class="gallery">
+    {{#if (gt model.length 0)}}
+      <div class="gallery-item add-button">
+        {{#link-to 'add'}}
+          <h3>+Add New Photo</h3>
+        {{/link-to}}
+      </div>
+      {{#each model as | photo | }}
+        <div class="gallery-item">
+          <h3>{{photo.name}}</h3>
+          {{#link-to 'photo' photo}}
+            <img src={{photo.photos.firstObject.data}} width="300">
+          {{/link-to}}
+        </div>
+      {{/each}}
+    {{else}}
+      {{#link-to 'add' class='big-cta'}}Upload First Photo{{/link-to}}
+    {{/if}}
+  </div>
+</div>
