@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const { Route, inject : { service } } = Ember;
+const { Route } = Ember;
 
 export default Route.extend({
  beforeModel() {
