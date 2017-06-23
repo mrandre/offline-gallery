@@ -52,7 +52,7 @@ body {
   input[type=text],
   textarea {
     background-color: #333;
-    border: 1px solid #777;
+    border: 1px solid #555;
     color: #eee;
     padding: 10px;
     border-radius: 3px;
@@ -60,13 +60,18 @@ body {
     width: 50%;
   }
 
+  input[type=file] {
+    margin-bottom: 20px;
+  }
+
   input[type=button],
-  input[type=submit] {
+  input[type=submit],
+  button {
     font-size: 18px;
     font-weight: bold;
-    padding: 20px;
-    background-color: #111;
-    border: 1px solid #777;
+    padding: 6px 30px;
+    background-color: #333;
+    border: 1px solid #555;
     color: #eee;
     border-radius: 5px;
     margin-right: 20px;
