@@ -16,14 +16,11 @@ body {
 
   h1, h3, p, li {
     color: $CONTRAST_COLOR;
+    text-shadow: 0 0 10px $TEXT_SHADOW_COLOR;
   }
 }
 
 .photos-show {
-  h1 {
-    text-shadow: 0 0 10px #aaa;
-  }
-
   p {
     text-indent: 0;
     margin: 10px 0;
@@ -68,7 +65,7 @@ body {
   button {
     font-size: 18px;
     font-weight: bold;
-    padding: 6px 30px;
+    padding: 10px 50px;
     background-color: #333;
     border: 1px solid #555;
     color: $CONTRAST_COLOR;
@@ -107,7 +104,7 @@ body {
   }
 
   h1 {
-    color: $BG_COLOR;
+    color: #eee;
     margin: 0;
     padding: 20px 10px;
   }
@@ -184,6 +181,7 @@ body {
             background: $CONTRAST_COLOR;
             border: 3px solid $CONTRAST_COLOR;
             color: $BG_COLOR;
+            text-shadow: none;
           }
 
           
