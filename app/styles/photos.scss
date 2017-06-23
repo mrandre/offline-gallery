@@ -6,7 +6,7 @@
 @import 'colors.scss';
 
 body {
-  background-color: #444;
+  background-color: $BG_COLOR;
 
   a, a:visited {
     color: $CONTRAST_COLOR;
@@ -15,13 +15,13 @@ body {
   }
 
   h1, h3, p, li {
-    color: #eee;
+    color: $CONTRAST_COLOR;
   }
 }
 
 .photos-show {
   h1 {
-    text-shadow: 0 0 10px #222;
+    text-shadow: 0 0 10px #aaa;
   }
 
   p {
@@ -37,7 +37,6 @@ body {
 
   img {
     display: block;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -53,7 +52,7 @@ body {
   textarea {
     background-color: #333;
     border: 1px solid #555;
-    color: #eee;
+    color: $CONTRAST_COLOR;
     padding: 10px;
     border-radius: 3px;
     font-size: 16px;
@@ -72,10 +71,16 @@ body {
     padding: 6px 30px;
     background-color: #333;
     border: 1px solid #555;
-    color: #eee;
+    color: $CONTRAST_COLOR;
     border-radius: 5px;
     margin-right: 20px;
     cursor: pointer;
+
+    &.secondary {
+      background-color: transparent;
+      border: none;
+      font-weight: normal;
+    }
   }
 }
 
@@ -102,6 +107,7 @@ body {
   }
 
   h1 {
+    color: $BG_COLOR;
     margin: 0;
     padding: 20px 10px;
   }
@@ -141,10 +147,10 @@ body {
           box-shadow: 0 0 30px transparent;
           transition: box-shadow 0.3s;
           &:hover {
-            box-shadow: 0 0 30px #222;
+            box-shadow: 0 10px 30px #222;
           }
           &:active {
-            box-shadow: 0 0 30px $CONTRAST_COLOR;
+            box-shadow: 0 10px 30px $CONTRAST_COLOR;
           }
         }
       }
@@ -177,7 +183,7 @@ body {
           &:hover {
             background: $CONTRAST_COLOR;
             border: 3px solid $CONTRAST_COLOR;
-            color: #444;
+            color: $BG_COLOR;
           }
 
           
@@ -193,7 +199,7 @@ body {
   left: 0;
   right: 0;
   background-color: #222;
-  color: #eee;
+  color: $CONTRAST_COLOR;
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;

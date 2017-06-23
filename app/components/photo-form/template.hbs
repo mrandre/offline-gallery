@@ -1,8 +1,8 @@
 <label>Image</label>
 {{input type="file" id="photoUpload" name="files[]" value=photo.photo_url}}
-<div id="preview">
+<div class="preview">
   {{#if photo.photos.firstObject.data}}
-    <img src={{photo.photos.firstObject.data}} width="600">
+    <img src={{photo.photos.firstObject.data}} width="100%">
   {{/if}}
 </div>
 <label>Name</label>

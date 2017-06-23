@@ -2,6 +2,7 @@
   <h1>Edit: {{model.name}}</h1>
   {{photo-form photo=model}}
   <div class="actions">
+    <button class="secondary" {{action 'cancel'}}>Cancel</button>
     <button {{action 'submit'}}>Save</button>
   </div>
 </div>

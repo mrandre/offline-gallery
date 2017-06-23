@@ -17,7 +17,7 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: $BG_COLOR;
   padding: 10px;
   font-size: 11px;
 }
@@ -27,11 +27,6 @@ a {
 
   &:visited {
     color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
   }
 }
 

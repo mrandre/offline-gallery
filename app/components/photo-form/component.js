@@ -6,20 +6,16 @@ export default Component.extend({
 
   didInsertElement() {
     let fileInput = document.getElementById('photoUpload');
-    let ember = this;
     fileInput.addEventListener('change', (evt) => {
       let file = evt.target.files[0];
       let reader = new FileReader();
-      reader.onload = ((theFile) => {
-        return function(e) {
-          // Render thumbnail.
-          get(ember, 'photo.photos').addObject(Ember.Object.create({
-            name: theFile.name,
-            content_type: 'image/jpg',
-            data: e.target.result
-          }));
-        };
-      })(file);
+      reader.onload = (e) => {
+        get(this, 'photo.photos').addObject(Ember.Object.create({
+          name: file.name,
+          content_type: 'image/jpg',
+          data: e.target.result
+        }));
+      };
       reader.readAsDataURL(file);
     }, false);
   }
